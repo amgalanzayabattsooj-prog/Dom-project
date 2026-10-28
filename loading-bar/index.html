@@ -8,111 +8,50 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body
-    class="min-h-screen min-w-[1000px] bg-[#190b10] font-sans text-[#fff5ee]"
-  >
+  <body class="min-h-screen min-w-[1000px] bg-[#190b10] font-sans text-[#fff5ee]">
     <div class="mx-auto flex min-h-screen w-[920px] flex-col">
-      <header
-        class="flex h-24 shrink-0 items-center justify-between border-b border-[#ff9299]/10"
-      >
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#ff9299]/10">
         <nav>
           <a
             href="../index.html"
             class="inline-flex items-center gap-2 rounded-full border border-[#ff9299]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#ff9299] transition-colors hover:border-[#ff9299]/35 hover:bg-[#ff9299]/10 hover:text-[#fff5ee] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff9299] motion-reduce:transition-none"
           >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
             Back to projects
           </a>
         </nav>
-        <span
-          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#ff9299]/65"
-          >The everyday collection / 01</span
-        >
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#ff9299]/65">The everyday collection / 01</span>
       </header>
 
       <div class="flex flex-1 items-center justify-center py-10 flex-col gap-[24px]">
-        <div
-          class="w-[230px] h-[12px] text-[#C4A2AB] text-[10px] font-inter flex items-center justify-center tracking-[3px] font-medium"
-        >
-          — LET’S GET YOU STARTED —
-        </div>
-        <div
-          class="w-[720px] h-[456px] border rounded-[24px] border-[#46232E] bg-[#260F17] flex flex-col truncate"
-        >
-          <div
-            class="p-[40px_48px_36px_48px] w-[720px] h-[398px] flex justify-between flex-col"
-          >
+        <div class="w-[230px] h-[12px] text-[#C4A2AB] text-[10px] font-inter flex items-center justify-center tracking-[3px] font-medium">— LET’S GET YOU STARTED —</div>
+        <div class="w-[720px] h-[456px] border rounded-[24px] border-[#46232E] bg-[#260F17] flex flex-col truncate">
+          <div class="p-[40px_48px_36px_48px] w-[720px] h-[398px] flex justify-between flex-col">
             <div class="w-[624px] h-[28px] flex justify-between items-center">
-              <div
-                class="w-[99px] h-[12px] text-[10px] text-[#FF9299] font-inter flex items-center tracking-[1.5px] font-semibold"
-              >
-                GETTING READY
-              </div>
-              <div
-                class="w-[44px] h-[13px] text-[11px] text-[#C4A2AB] font-inter flex items-center"
-              >
-                01 — 03
-              </div>
+              <div class="w-[99px] h-[12px] text-[10px] text-[#FF9299] font-inter flex items-center tracking-[1.5px] font-semibold">GETTING READY</div>
+              <div class="w-[44px] h-[13px] text-[11px] text-[#C4A2AB] font-inter flex items-center">01 — 03</div>
             </div>
-            <div
-              class="w-[483px] h-[48px] font-inter text-[40px] text-[#FFF5EE] items-center flex tracking-[-1.8px] font-semibold"
-            >
-              Something good is coming.
-            </div>
-            <div
-              class="w-[287px] h-[18px] font-inter text-[#C4A2AB] text-[15px] flex items-center"
-            >
-              A little preparation for a great beginning.
-            </div>
+            <div class="w-[483px] h-[48px] font-inter text-[40px] text-[#FFF5EE] items-center flex tracking-[-1.8px] font-semibold">Something good is coming.</div>
+            <div class="w-[287px] h-[18px] font-inter text-[#C4A2AB] text-[15px] flex items-center">A little preparation for a great beginning.</div>
             <div class="w-[624px] justify-between flex items-center">
-              <div
-                class="w-[138px] leading-[110px] font-inter text-[112px] text-[#FFF5EE] flex items-end font-medium"
-              >
-                64
-                <span
-                  class="w-[31px] h-[46px] text-[38px] text-[#FF6470] flex items-center"
-                  >%</span
-                >
+              <div class="flex items-end">
+                <div id="counter" class=" min-w-[138px] leading-[110px] font-inter text-[112px] text-[#FFF5EE] flex items-end font-medium">64</div>
+                <span class="w-[31px] h-[46px] text-[38px] text-[#FF6470] flex items-center">%</span>
               </div>
-              <div
-                class="w-[190px] h-[17px] text-[14px] text-[#C4A2AB] flex items-center"
-              >
-                Bringing everything together
-              </div>
+              <div id="messeges" class="w-[190px] h-[17px] text-[14px] text-[#C4A2AB] flex items-center">Bringing everything together</div>
             </div>
             <div class="w-[624px] h-[12px] rounded-[6px] bg-[#46232E]">
-              <div class="w-[399px] h-[12px] rounded-[6px] bg-[#EF3340]"></div>
+              <div id="loadingBar" class="w-0 h-[12px] rounded-[6px] bg-[#EF3340]"></div>
             </div>
             <div class="w-[624px] h-[16px] flex justify-between items-center">
-              <div
-                class="w-[173px] h-[12px] text-[#C4A2AB] text-[10px] tracking-[1px]"
-              >
-                PREPARING YOUR EXPERIENCE
-              </div>
-              <div
-                class="w-[96px] h-[12px] text-[10px] text-[#C4A2AB] tracking-[1px]"
-              >
-                JUST A MOMENT
-              </div>
+              <div class="w-[173px] h-[12px] text-[#C4A2AB] text-[10px] tracking-[1px]">PREPARING YOUR EXPERIENCE</div>
+              <div class="w-[96px] h-[12px] text-[10px] text-[#C4A2AB] tracking-[1px]">JUST A MOMENT</div>
             </div>
           </div>
-          <div
-            class="w-[720px] h-[56px] gap-[8px] bg-[#1E0C13] flex justify-center items-center"
-          >
-            <div class="w-[265px] h-[15px] text-[12px] text-[#C4A2AB]">
-              → Your welcome page will open automatically.
-            </div>
+          <div class="w-[720px] h-[56px] gap-[8px] bg-[#1E0C13] flex justify-center items-center">
+            <div class="w-[265px] h-[15px] text-[12px] text-[#C4A2AB]">→ Your welcome page will open automatically.</div>
           </div>
         </div>
       </div>
