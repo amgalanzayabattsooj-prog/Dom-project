@@ -5,9 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Random password generator
+  <body class="min-h-screen min-w-[1000px] bg-[#101b16] font-sans text-[#f0fdf4]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#86efac]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#86efac]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#86efac] transition-colors hover:border-[#86efac]/35 hover:bg-[#86efac]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#86efac] motion-reduce:transition-none"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#86efac]/65">The everyday collection / 02</span>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="flex w-[520px] h-[571px] rounded-[24px] flex-col border-[1px] border-[#FFFFFF1A] p-36px bg-[#192B22] pl-[36px] pt-[36px]">
+          <div class="flex items-center justify-center w-[44px] h-[44px] rounded-[12px] bg-[#4ADE8026]">
+            <div class="w-[23px] h-[23px] text-[#86EFAC] [#86EFAC]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-lock-keyhole preview-icon"
+              >
+                <circle cx="12" cy="16" r="1" />
+                <rect x="3" y="10" width="18" height="12" rx="2" />
+                <path d="M7 10V7a5 5 0 0 1 10 0v3" />
+              </svg>
+            </div>
+          </div>
+          <div class="w-[273px] h-[34px] items-center text-[28px] font-semibold font-inter mt-[24px]">Password generator</div>
+          <div class="w-[235px] h-[17px] items-center text-[14px] font-inter text-[#A4B9AD] mt-[8px]">A strong password. One click away.</div>
+          <div class="w-[85px] h-[15px] items-center text-[12px] font-inter text-[#A4B9AD] mt-[32px]">Your password</div>
+          <div class="mr-[34px] h-[64px] flex rounded-[12px] justify-between items-center border-[#FFFFFF1A] border-[1px] bg-[#101B16] mt-[12px]">
+            <div id="show-generated-password" class="w-[173px] h-[24px] flex text-[18px] items-center text-[#BBF7D0] text-mono ml-[16px]"></div>
+            <div id="copy-generated-password" class="w-[55px] h-[31px] flex rounded-[8px] bg-[#FFFFFF0D] items-center justify-center text-[12px] text-[#DCECE2] mr-[12px]">Copy</div>
+          </div>
+          <div id="messege" class="w-[207px] h-[15px] text-[12px] text-[#A4B9AD] mt-[12px]">Uses letters, numbers, and symbols.</div>
+          <div class="w-[448px] h-[28px] flex justify-between items-center mt-[24px]">
+            <div class="text-[14px] font-inter text-[#DCECE2]">Password length</div>
+            <div id="password-length-range-output" class="text-[18px] font-inter text-[#86EFAC]">16</div>
+          </div>
+          <input id="password-length-range-input" type="range" min="8" max="24" value="16" class="mt-4 w-[448px] cursor-pointer accent-[#4ade80]" />
+          <div class="w-[448px] h-[16px] flex justify-between text-[#8AA294] text-[12px] items-center mt-[10px]">
+            <span>8</span>
+            <span>24</span>
+          </div>
+          <div id="generate-password" class="w-[448px] h-[48px] flex rounded-[12px] bg-[#4ADE80] mt-[28px] text-[14px] text-[#102418] font-semibold justify-center items-center hover:bg-green-800 hover:text-green-500">Generate password</div>
+          <div class="w-[448px] h-[16px] flex justify-center items-center text-[12px] text-[#8AA294] font-inter mt-[20.5px] ">Generated in your browser. Never saved.</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
