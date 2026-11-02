@@ -6,7 +6,45 @@
     <meta name="theme-color" content="#f5f3ee" />
     <title>Analog Clock · A moment in time</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
+  <body class="relative isolate min-h-screen min-w-[1000px] bg-[#f5f3ee] font-sans text-[#253b35] antialiased selection:bg-[#dbe4d6]">
+    <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_45%,#ffffff_0%,#f5f3ee_65%)]"></div>
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#253b35]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#253b35]/10 bg-white/60 px-4 py-2.5 text-xs font-medium text-[#52675c] transition-colors hover:border-[#253b35]/25 hover:bg-white hover:text-[#253b35] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#52675c]"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#748174]">The everyday collection / 05</span>
+      </header>
 
-  <body>Analog clock</body>
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="w-[392px] h-[439px] gap-[32px] flex flex-col justify-center items-center">
+          <div class="w-[392px] h-[392px] rounded-full border-[16px] border-[#E9E7DF] flex flex-col justify-center items-center">
+            <div class="w-[360px] h-[360px] bg-[#FCFBF7] rounded-full border border-[#D8DBD1] flex justify-center items-center flex-col relative">
+              <div id="markers" class="absolute inset-0"></div>
+              <div id="numbers" class="absolute inset-0 font-serif text-xl"></div>
+
+              <div id="hour-hand" class="absolute left-1/2 bottom-1/2 -translate-x-1/2 w-1.5 h-23 origin-bottom rounded-full bg-[#1f3a33]"></div>
+              <div id="minute-hand" class="absolute left-1/2 bottom-1/2 -translate-x-1/2 w-1 h-30 rounded-full origin-bottom bg-[#253B35]"></div>
+              <div id="second-hand" class="absolute left-1/2 bottom-1/2 -translate-x-1/2 w-0.5 h-40 rounded-full origin-bottom bg-[#C47E57]"></div>
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[10px] h-[10px] bg-[#C47E57] rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="flex h-16 shrink-0 items-center justify-between border-t border-[#253b35]/10 text-[10px] text-[#748174]">
+        <span>Every second, thoughtfully measured.</span><span class="font-mono tracking-[2px]">ANALOG / LIVE</span>
+      </footer>
+    </div>
+  </body>
 </html>
