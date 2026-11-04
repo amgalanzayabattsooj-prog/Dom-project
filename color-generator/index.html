@@ -16,16 +16,7 @@
             href="../index.html"
             class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
           >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
             Back to projects
@@ -33,10 +24,47 @@
         </nav>
         <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 03</span>
       </header>
-     
-<div class="flex flex-1 items-center justify-center py-10">
-        <!-- Endees ehel -->
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="flex flex-col w-[1440px] h-[1180px]">
+          <div class="w-full h-[104px] flex justify-between">
+            <div class="h-[65px] w-[620px] gap-12px flex-col">
+              <div class="font-semibold text-[30px] mb-[12px]">Color palettes.</div>
+              <div class="font-inter text-[14px] text-[#A1A1AA]">Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
+            </div>
+            <div class="w-[186px] h-[48px] rounded-[12px] gap-[8px] bg-[#D9F99D] flex justify-center items-center">
+              <div class="text-[5px] text-[#09090B]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shuffle preview-icon"
+                >
+                  <path d="m18 14 4 4-4 4" />
+                  <path d="m18 2 4 4-4 4" />
+                  <path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22" />
+                  <path d="M2 6h1.972a4 4 0 0 1 3.6 2.2" />
+                  <path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45" />
+                </svg>
+              </div>
+              <div id="shuffle-colors" class="text-[14px] text-[#09090B] font-semibold">Shuffle palettes</div>
+            </div>
+          </div>
+
+          <div class="w-full h-[55px] flex justify-between items-center text-[12px] text-[#A1A1AA] font-regular">
+            <div>100 → 950 · LIGHT TO DARK</div>
+            <div id="status">Ready to explore.</div>
+          </div>
+
+          <div id="colors" class="w-full gap-7 flex flex-col"></div>
+        </div>
       </div>
     </div>
   </body>
-</html> 
+</html>
