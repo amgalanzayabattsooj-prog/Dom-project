@@ -5,8 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reaction time</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
-  <body>
-    Reaction time game
+  <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 06</span>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="flex flex-col w-[576px] h-[575px] rounded-[24px] border border-[#27272A] bg-[#18181B] p-[32px]">
+          <div class="w-[159px] h-[29px] text-[24px] font-semibold text-[#F4F4F5]">Reaction time</div>
+          <div class="w-[313px] h-[24px] text-[14px] font-regular text-[#A1A1AA] mt-[8px]">Wait for green, then click as quickly as you can.</div>
+          <button
+            id="panel"
+            type="button"
+            class="w-[512px] h-[256px] bg-[#27272A] mt-[24px] rounded-[16px] gap-3 items-center flex flex-col justify-center text-[#F4F4F5] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
+          >
+            <div id="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-target preview-icon"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+            <div id="first-word" class="text-[24px] font-semibold">Ready when you are</div>
+            <div id="second-word" class="text-[14px]">Click to start</div>
+          </button>
+          <div class="w-[512px] h-[84px] gap-3 flex mt-[24px]">
+            <div class="w-[250px] h-[84px] rounded-[12px] gap-[4px] bg-[#27272A] flex flex-col justify-center items-center">
+              <div id="ms-number" class="text-[#D9F99D] tracking-* text-2xl">—</div>
+              <span class="text-[#A1A1AA] text-[12px]">Last attempt</span>
+            </div>
+            <div class="w-[250px] h-[84px] rounded-[12px] gap-[4px] bg-[#27272A] flex flex-col justify-center items-center">
+              <div id="ms-number-two" class="text-[#D9F99D] tracking-* text-2xl">—</div>
+              <span class="text-[#A1A1AA] text-[12px]">Best this session</span>
+            </div>
+          </div>
+          <div class="w-[512px] h-[40px] text-[12px] flex items-center justify-center text-center text-[#A1A1AA] mt-[20px]">
+            Click the panel, or focus it and press Space or Enter. Clicking before green ends the attempt.
+          </div>
+          <div id="status" class="sr-only" aria-live="polite">Ready to start.</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
